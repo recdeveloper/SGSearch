@@ -1,0 +1,6 @@
+framework module Pods_SeatGeekSearch {
+  umbrella header "Pods-SeatGeekSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}
