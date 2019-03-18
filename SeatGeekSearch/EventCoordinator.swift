@@ -43,7 +43,7 @@ class EventCoordinator: EventSearchTableViewDelegate, EventSearchViewControllerD
     
     func loadResults(search: String) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        dataCoordinator.search(query: search).done {
+        dataCoordinator.search(query: search).done { //TODO: searches should happen in a strict Queue to avoid messy async
             self.tableViewController.events = $0
         }.ensure {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
